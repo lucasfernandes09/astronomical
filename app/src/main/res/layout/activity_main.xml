@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shpe_bubble"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_margin="16dp">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/colorAccent"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_planet"
+            app:bt_padding="8dp"
+            app:bt_shape="@drawable/shape_bubble_dark"
+            app:bt_title="Planetas"
+            app:bt_titlePadding="8dp" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:bt_active="true"
+            app:bt_colorActive="@color/colorAccent"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_telescope"
+            app:bt_padding="8dp"
+            app:bt_shape="@drawable/shape_bubble_dark"
+            app:bt_title="ID"
+            app:bt_titlePadding="8dp" >
+
+        </com.gauravk.bubblenavigation.BubbleToggleView>
+
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+    <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
