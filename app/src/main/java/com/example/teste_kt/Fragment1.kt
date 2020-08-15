@@ -8,12 +8,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.ToggleButton
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_1.*
 import kotlinx.android.synthetic.main.fragment_1.view.*
 
-class Fragment1 : Fragment() , AdapterPlaneta.PlanetaListener {
+class Fragment1 : Fragment() , AdapterPlaneta.PlanetaListener, AdapterPlaneta2.PlanetaListener {
     val listaDePlanetas = mutableListOf<Planeta>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,9 +41,26 @@ class Fragment1 : Fragment() , AdapterPlaneta.PlanetaListener {
         val recyclerView = view.recyclerView
         val layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = layoutManager
+        verificarButton(view)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapterPlaneta
+    }
 
+    fun verificarButton(view: View) {
+        val toggleButton = view.toggleButton
+        toggleButton.setOnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked) {
+                val adapter = AdapterPlaneta2(listaDePlanetas, this)
+                val layoutManager = GridLayoutManager(context, 3)
+                view.recyclerView.layoutManager = layoutManager
+                view.recyclerView.adapter = adapter
+            }else {
+                val adapter = AdapterPlaneta(listaDePlanetas, this)
+                val layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+                view.recyclerView.layoutManager = layoutManager
+                view.recyclerView.adapter = adapter
+            }
+        }
     }
 
     fun initPlanetas() {
@@ -96,5 +115,9 @@ class Fragment1 : Fragment() , AdapterPlaneta.PlanetaListener {
         Log.i("infoF", "onDetach fragment1")
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.i("infoF", "onSaveInstanceState")
+    }
 
 }

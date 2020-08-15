@@ -14,7 +14,7 @@
         android:background="@drawable/shpe_bubble"
         android:elevation="4dp"
         android:orientation="horizontal"
-        android:padding="12dp"
+        android:padding="8dp"
         android:layout_margin="16dp">
 
         <com.gauravk.bubblenavigation.BubbleToggleView
