@@ -23,21 +23,21 @@ class Planeta(val nome: String?) : Parcelable {
 
     init {
         when(nome) {
-            "Mercúrio" -> { diametro = "4878 Km"; massa = "0.05"; distanciaSol = "57.9"; anoTerrestre = "87.9 dias"; diaTerrestre = "58 dias";
+            "Mercúrio" -> { diametro = "4878 Km"; massa = "0.05"; distanciaSol = "57.900.000 Km"; anoTerrestre = "87.9 dias"; diaTerrestre = "58 dias";
                 img = R.drawable.jpg_1; icon = R.drawable.ic_p_mercury}
-            "Vênus" -> {diametro = "12.100 Km"; massa = "0.815"; distanciaSol = "108.2"; anoTerrestre = "224 dias"; diaTerrestre = "-234 dias";
+            "Vênus" -> {diametro = "12.100 Km"; massa = "0.815"; distanciaSol = "108.200.000 Km"; anoTerrestre = "224 dias"; diaTerrestre = "-234 dias";
                 img = R.drawable.jpg_2; icon = R.drawable.ic_p_venus}
-            "Terra" -> {diametro = "12.756 Km"; massa = "1"; distanciaSol = "149.6"; anoTerrestre = "365 dias"; diaTerrestre = "24h";
+            "Terra" -> {diametro = "12.756 Km"; massa = "1"; distanciaSol = "149.700.000 Km"; anoTerrestre = "365 dias"; diaTerrestre = "24h";
                 img = R.drawable.jpg_3; icon = R.drawable.ic_p_earth}
-            "Marte" -> {diametro = "6.786 Km"; massa = "0.1"; distanciaSol = "227.9"; anoTerrestre = "687 dias"; diaTerrestre = "24h 37m";
+            "Marte" -> {diametro = "6.786 Km"; massa = "0.1"; distanciaSol = "227.900.000 Km"; anoTerrestre = "687 dias"; diaTerrestre = "24h 37m";
                 img = R.drawable.jpg_4; icon = R.drawable.ic_p_mars}
-            "Júpiter" -> {diametro = "142.984 Km"; massa = "317.9"; distanciaSol = "778.4"; anoTerrestre = "11.86 anos"; diaTerrestre = "9h 48m";
+            "Júpiter" -> {diametro = "142.984 Km"; massa = "317.9"; distanciaSol = "778.400.000 Km"; anoTerrestre = "11.86 anos"; diaTerrestre = "9h 48m";
                 img = R.drawable.jpg_5; icon = R.drawable.ic_p_jupiter}
-            "Saturno" -> {diametro = "120.536 Km"; massa = "95"; distanciaSol = "1423.6"; anoTerrestre = "29.46 anos"; diaTerrestre = "10h 12m";
+            "Saturno" -> {diametro = "120.536 Km"; massa = "95"; distanciaSol = "1.423.600.000 Km"; anoTerrestre = "29.46 anos"; diaTerrestre = "10h 12m";
                 img = R.drawable.jpg_6; icon = R.drawable.ic_p_saturn}
-            "Urano" -> {diametro = "51.108 Km"; massa = "14.6"; distanciaSol = "2867"; anoTerrestre = "84.04 anos"; diaTerrestre = "-17h 54m";
+            "Urano" -> {diametro = "51.108 Km"; massa = "14.6"; distanciaSol = "2.867.000.000 Km"; anoTerrestre = "84.04 anos"; diaTerrestre = "-17h 54m";
                 img = R.drawable.jpg_7; icon = R.drawable.ic_p_uranus}
-            "Netuno" -> {diametro = "49.538 Km"; massa = "17.2"; distanciaSol = "4488"; anoTerrestre = "164 anos"; diaTerrestre = "19h 6m";
+            "Netuno" -> {diametro = "49.538 Km"; massa = "17.2"; distanciaSol = "4.488.000.000 Km"; anoTerrestre = "164 anos"; diaTerrestre = "19h 6m";
                 img = R.drawable.jpg_8; icon = R.drawable.ic_p_neptune}
         }
     }

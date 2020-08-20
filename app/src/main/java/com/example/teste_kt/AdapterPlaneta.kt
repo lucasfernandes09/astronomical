@@ -23,6 +23,7 @@ class AdapterPlaneta(val listaDePlanetas: MutableList<Planeta>, val planetaListe
 
         holder.tv_nome.text = planeta.nome
         holder.iv_icon.setImageResource(planeta.icon)
+        holder.tv_dSol.text = planeta.distanciaSol
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +42,7 @@ class AdapterPlaneta(val listaDePlanetas: MutableList<Planeta>, val planetaListe
 
         val tv_nome: TextView = itemView.tv_nome
         val iv_icon: ImageView = itemView.iv_icon
+        val tv_dSol: TextView = itemView.tv_dSol
 
         init {
             itemView.setOnClickListener(this)
